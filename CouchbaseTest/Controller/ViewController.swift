@@ -12,7 +12,6 @@ import CouchbaseLiteSwift
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
     
     var objects:[Document] = []
     
@@ -34,14 +33,7 @@ class ViewController: UIViewController {
         //Form Query
         var query: Query!
         
-        let sortOrder:Int = 0 // set your order
-        
-        var orderings: [OrderingProtocol] = [Ordering.property(ParseKey.budPercVarPct.string())]
-//        for key in ParseKey.allCases {
-//            let ordering = sortOrder == 1 ? Ordering.property(key.string()).ascending() :
-//                Ordering.property(key.string()).descending()
-//            orderings.append(ordering)
-//        }
+        let orderings: [OrderingProtocol] = [Ordering.property(ParseKey.sub.string())]
         
         query = QueryBuilder
             .select(SelectResult.expression(Meta.id))
@@ -61,8 +53,6 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
         
-        print("Objects \(objects.count)")
-        
         // Load Data
         tableView.reloadData()
     }
@@ -76,17 +66,11 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? DataObjectTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cell.id) as? DataObjectTableViewCell else { return UITableViewCell() }
         
         // Show Data
         cell.configureWith(objects[indexPath.row])
         return cell
-    }
-}
-
-extension ViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        loadData()
     }
 }
 

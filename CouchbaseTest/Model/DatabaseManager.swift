@@ -59,7 +59,7 @@ class DatabaseManager: NSObject, DataSourceProtocol {
         }
         
         // Drill down to values
-        guard let values = json["returnValue"] as? [[String: AnyObject]]
+        guard let values = json[Constants.Parse.returnValue] as? [[String: AnyObject]]
         else { return }
         
         // Parse JSON

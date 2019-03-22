@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="500" estimatedRowHeight="500" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q2T-Mh-dR4">
-                                <rect key="frame" x="0.0" y="60" width="375" height="526"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="500" id="Kk7-h5-G24" customClass="DataObjectTableViewCell" customModule="CouchbaseTest" customModuleProvider="target">
@@ -301,28 +301,17 @@
                                     <outlet property="dataSource" destination="MIj-oG-4PF" id="gpV-Te-Da6"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zsL-ep-zWx">
-                                <rect key="frame" x="0.0" y="586" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="MIj-oG-4PF" id="SgY-oN-Hjs"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="q2T-Mh-dR4" firstAttribute="leading" secondItem="DKm-8n-qtZ" secondAttribute="leading" id="28S-aZ-G8a"/>
-                            <constraint firstItem="zsL-ep-zWx" firstAttribute="trailing" secondItem="DKm-8n-qtZ" secondAttribute="trailing" id="EPI-Qx-kJk"/>
+                            <constraint firstItem="DKm-8n-qtZ" firstAttribute="bottom" secondItem="q2T-Mh-dR4" secondAttribute="bottom" id="Q1H-Pt-rKZ"/>
                             <constraint firstItem="q2T-Mh-dR4" firstAttribute="trailing" secondItem="DKm-8n-qtZ" secondAttribute="trailing" id="SLG-LV-hxc"/>
-                            <constraint firstItem="q2T-Mh-dR4" firstAttribute="top" secondItem="DKm-8n-qtZ" secondAttribute="top" constant="40" id="hcd-rh-xv6"/>
-                            <constraint firstItem="zsL-ep-zWx" firstAttribute="top" secondItem="q2T-Mh-dR4" secondAttribute="bottom" id="qVr-KP-NrG"/>
-                            <constraint firstItem="DKm-8n-qtZ" firstAttribute="bottom" secondItem="zsL-ep-zWx" secondAttribute="bottom" constant="25" id="rHL-nc-3G8"/>
-                            <constraint firstItem="zsL-ep-zWx" firstAttribute="leading" secondItem="DKm-8n-qtZ" secondAttribute="leading" id="rxt-dm-gMW"/>
+                            <constraint firstItem="q2T-Mh-dR4" firstAttribute="top" secondItem="lEK-Cf-aLV" secondAttribute="top" id="UVf-MR-jJ8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DKm-8n-qtZ"/>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="zsL-ep-zWx" id="A43-ZH-uda"/>
                         <outlet property="tableView" destination="q2T-Mh-dR4" id="6dO-DX-77P"/>
                     </connections>
                 </viewController>

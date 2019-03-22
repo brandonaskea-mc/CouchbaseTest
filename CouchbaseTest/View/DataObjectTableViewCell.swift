@@ -46,10 +46,6 @@ class DataObjectTableViewCell: UITableViewCell {
             }).first as? UILabel else { continue }
             
             // Get value
-//            if let doubleValue = document.value(forKey: <#T##String#>) {
-//
-//            }
-//            else if stringValue =
             var stringValue = "Unknown"
             if let value = document.string(forKey: key.string()) {
                 stringValue = value
