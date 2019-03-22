@@ -13,6 +13,14 @@
 		8991549E22443E31002E9D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8991549D22443E31002E9D74 /* Assets.xcassets */; };
 		899154A122443E31002E9D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8991549F22443E31002E9D74 /* LaunchScreen.storyboard */; };
 		899154AC22443E31002E9D74 /* CouchbaseTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899154AB22443E31002E9D74 /* CouchbaseTestTests.swift */; };
+		899154B922444588002E9D74 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899154B822444588002E9D74 /* DatabaseManager.swift */; };
+		899154BB224445FD002E9D74 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899154BA224445FD002E9D74 /* DataObject.swift */; };
+		899154BD224446F6002E9D74 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 899154BC224446F6002E9D74 /* data.json */; };
+		899154C122444BE5002E9D74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899154C022444BE5002E9D74 /* Constants.swift */; };
+		899154C32244583B002E9D74 /* DataObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899154C22244583B002E9D74 /* DataObjectTableViewCell.swift */; };
+		899154C622455159002E9D74 /* ParseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899154C522455159002E9D74 /* ParseKeys.swift */; };
+		899154CB22456FBD002E9D74 /* CouchbaseLiteSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899154CA22456FBD002E9D74 /* CouchbaseLiteSwift.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		899154CC22456FF8002E9D74 /* CouchbaseLiteSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 899154CA22456FBD002E9D74 /* CouchbaseLiteSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +33,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		899154C822456C52002E9D74 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				899154CC22456FF8002E9D74 /* CouchbaseLiteSwift.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8991549322443E2F002E9D74 /* CouchbaseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouchbaseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8991549622443E2F002E9D74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +57,13 @@
 		899154A722443E31002E9D74 /* CouchbaseTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CouchbaseTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899154AB22443E31002E9D74 /* CouchbaseTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouchbaseTestTests.swift; sourceTree = "<group>"; };
 		899154AD22443E31002E9D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		899154B822444588002E9D74 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		899154BA224445FD002E9D74 /* DataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
+		899154BC224446F6002E9D74 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		899154C022444BE5002E9D74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		899154C22244583B002E9D74 /* DataObjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataObjectTableViewCell.swift; sourceTree = "<group>"; };
+		899154C522455159002E9D74 /* ParseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseKeys.swift; sourceTree = "<group>"; };
+		899154CA22456FBD002E9D74 /* CouchbaseLiteSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLiteSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899154CB22456FBD002E9D74 /* CouchbaseLiteSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +106,16 @@
 		8991549522443E2F002E9D74 /* CouchbaseTest */ = {
 			isa = PBXGroup;
 			children = (
+				899154CA22456FBD002E9D74 /* CouchbaseLiteSwift.framework */,
 				8991549622443E2F002E9D74 /* AppDelegate.swift */,
-				8991549822443E2F002E9D74 /* ViewController.swift */,
-				8991549A22443E2F002E9D74 /* Main.storyboard */,
+				899154BF22444B88002E9D74 /* Controller */,
+				899154C42244583F002E9D74 /* View */,
+				899154BE22444B7D002E9D74 /* Model */,
 				8991549D22443E31002E9D74 /* Assets.xcassets */,
+				899154C022444BE5002E9D74 /* Constants.swift */,
 				8991549F22443E31002E9D74 /* LaunchScreen.storyboard */,
 				899154A222443E31002E9D74 /* Info.plist */,
+				899154BC224446F6002E9D74 /* data.json */,
 			);
 			path = CouchbaseTest;
 			sourceTree = "<group>";
@@ -96,6 +129,33 @@
 			path = CouchbaseTestTests;
 			sourceTree = "<group>";
 		};
+		899154BE22444B7D002E9D74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				899154B822444588002E9D74 /* DatabaseManager.swift */,
+				899154BA224445FD002E9D74 /* DataObject.swift */,
+				899154C522455159002E9D74 /* ParseKeys.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		899154BF22444B88002E9D74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8991549A22443E2F002E9D74 /* Main.storyboard */,
+				8991549822443E2F002E9D74 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		899154C42244583F002E9D74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				899154C22244583B002E9D74 /* DataObjectTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +166,7 @@
 				8991548F22443E2F002E9D74 /* Sources */,
 				8991549022443E2F002E9D74 /* Frameworks */,
 				8991549122443E2F002E9D74 /* Resources */,
+				899154C822456C52002E9D74 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -180,6 +241,7 @@
 				899154A122443E31002E9D74 /* LaunchScreen.storyboard in Resources */,
 				8991549E22443E31002E9D74 /* Assets.xcassets in Resources */,
 				8991549C22443E2F002E9D74 /* Main.storyboard in Resources */,
+				899154BD224446F6002E9D74 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +259,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899154C122444BE5002E9D74 /* Constants.swift in Sources */,
+				899154BB224445FD002E9D74 /* DataObject.swift in Sources */,
+				899154C32244583B002E9D74 /* DataObjectTableViewCell.swift in Sources */,
 				8991549922443E2F002E9D74 /* ViewController.swift in Sources */,
 				8991549722443E2F002E9D74 /* AppDelegate.swift in Sources */,
+				899154B922444588002E9D74 /* DatabaseManager.swift in Sources */,
+				899154C622455159002E9D74 /* ParseKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +429,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A4LJ2YC4BS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CouchbaseTest",
+				);
 				INFOPLIST_FILE = CouchbaseTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,6 +451,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A4LJ2YC4BS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CouchbaseTest",
+				);
 				INFOPLIST_FILE = CouchbaseTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

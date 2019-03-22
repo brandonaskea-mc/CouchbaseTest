@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+       
+        if !UserDefaults.standard.bool(forKey: "didStoreData") {
+            DatabaseManager.instance.storeData()
+            UserDefaults.standard.set(true, forKey: "didStoreData")
+            UserDefaults.standard.synchronize()
+        }
+        
         return true
     }
 
